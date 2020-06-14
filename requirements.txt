@@ -1,0 +1,8 @@
+Flask==1.1.2
+tornado==6.0.4
+youtube-dl==2020.6.6
+youtube-search==0.1.4
+schedule==0.6.0
+path==14.0.1
+
+
