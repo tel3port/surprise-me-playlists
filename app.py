@@ -30,7 +30,7 @@ search_terms = [
 ]
 
 DIRECTORY = './'  # music source Directory
-COPY_DIRECTORY = './music'  # Destination directory
+COPY_DIRECTORY = './static'  # Destination directory
 
 d = Path(DIRECTORY)
 copy_directory = Path(COPY_DIRECTORY)
@@ -117,7 +117,7 @@ def custom__scheduler():
 def return_dict():
     # Dictionary to store music file information
     dict_here = [
-        {'id': 1, 'name': 'Acoustic Breeze', 'link': 'music/a.mp3', 'genre': 'General', 'chill out': 5}
+        {'id': 1, 'name': 'Acoustic Breeze', 'link': 'static/a.mp3', 'genre': 'General', 'chill out': 5}
         ]
     return dict_here
 
