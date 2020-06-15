@@ -158,12 +158,12 @@ def streammp3(stream_id):
 # launch a Tornado server with HTTPServer.
 if __name__ == "__main__":
     try:
-        app.run(debug=True)
-        port = 5000
-        http_server = HTTPServer(WSGIContainer(app))
-        logging.debug("Started Server, Kindly visit http://localhost:" + str(port))
-        http_server.listen(port)
-        IOLoop.instance().start()
+        # app.run(debug=True)
+        # port = 5000
+        # http_server = HTTPServer(WSGIContainer(app))
+        # logging.debug("Started Server, Kindly visit http://localhost:" + str(port))
+        # http_server.listen(port)
+        # IOLoop.instance().start()
         custom__scheduler()
 
     except Exception as e:
