@@ -46,6 +46,9 @@ formatter = logging.Formatter(
 ch.setFormatter(formatter)
 root.addHandler(ch)
 
+# Initialize Flask.
+app = Flask(__name__)
+
 
 def download_yt_mp3():
     results = YoutubeSearch(search_terms[randint(0, len(search_terms) - 1)], max_results=10).to_dict()
@@ -93,6 +96,7 @@ def download_yt_mp3():
             print(e)
 
 
+@app.route('/')
 def custom__scheduler():
     try:
         # scheduling the pin and follow  and infinite scroll times
@@ -122,9 +126,6 @@ def return_dict():
         ]
     return dict_here
 
-
-# Initialize Flask.
-app = Flask(__name__)
 
 # Route to render GUI
 @app.route('/')
