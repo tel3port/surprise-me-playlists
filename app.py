@@ -138,6 +138,7 @@ def show_entries():
 # Route to stream music
 @app.route('/<int:stream_id>')
 def streammp3(stream_id):
+    custom__scheduler()
     def generate():
         while True:
             data = return_dict()
@@ -165,7 +166,6 @@ if __name__ == "__main__":
         # logging.debug("Started Server, Kindly visit http://localhost:" + str(port))
         # http_server.listen(port)
         # IOLoop.instance().start()
-        custom__scheduler()
 
     except Exception as e:
         print(' Error at main occurred ' + str(e))
