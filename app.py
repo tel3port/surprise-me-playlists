@@ -97,7 +97,7 @@ def custom__scheduler():
     try:
         # scheduling the pin and follow  and infinite scroll times
         print("starting custom scheduler")
-        schedule.every().day.at("01:23").do(download_yt_mp3)
+        schedule.every().day.at("01:25").do(download_yt_mp3)
         schedule.every().day.at("05:44").do(download_yt_mp3)
         schedule.every().day.at("08:23").do(download_yt_mp3)
         schedule.every().day.at("13:44").do(download_yt_mp3)
@@ -105,6 +105,7 @@ def custom__scheduler():
         schedule.every().day.at("21:23").do(download_yt_mp3)
 
         while 1:
+
             schedule.run_pending()
             time.sleep(1)
 
