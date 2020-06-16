@@ -129,6 +129,7 @@ app = Flask(__name__)
 # Route to render GUI
 @app.route('/')
 def show_entries():
+    custom__scheduler()
     general_Data = {
         'title': 'Random Playlists'}
     print(return_dict())
@@ -138,7 +139,6 @@ def show_entries():
 # Route to stream music
 @app.route('/<int:stream_id>')
 def streammp3(stream_id):
-    custom__scheduler()
     def generate():
         while True:
             data = return_dict()
@@ -160,6 +160,7 @@ def streammp3(stream_id):
 # launch a Tornado server with HTTPServer.
 if __name__ == "__main__":
     try:
+        pass
         # app.run(debug=True)
         # port = 5000
         # http_server = HTTPServer(WSGIContainer(app))
