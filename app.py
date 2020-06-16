@@ -96,7 +96,6 @@ def download_yt_mp3():
             print(e)
 
 
-@app.route('/')
 def custom__scheduler():
     try:
         # scheduling the pin and follow  and infinite scroll times
